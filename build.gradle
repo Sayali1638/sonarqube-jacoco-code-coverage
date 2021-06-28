@@ -24,4 +24,15 @@ sonarqube {
     }
 }
 
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
+
+jacoco {
+    toolVersion = "0.8.5"
+    reportsDir = file("$buildDir/jacoco")
+}
+
 tasks['sonarqube'].dependsOn test
